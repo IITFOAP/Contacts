@@ -13,7 +13,7 @@ struct ContactListView: View {
     var body: some View {
         List(persons) { person in
             NavigationLink(destination: PersonDetailView(person: person)) {
-                Text("\(person.fullName)")
+                Text(person.fullName)
             }
         }
         .listStyle(.plain)

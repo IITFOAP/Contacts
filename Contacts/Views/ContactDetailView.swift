@@ -12,11 +12,12 @@ struct ContactDetailView: View {
     
     var body: some View {
         List(persons) { person in
-            Section(header: Text("\(person.fullName)")) {
+            Section(header: Text(person.fullName).font(.headline)) {
                 ContactInfo(image: Contacts.phone.rawValue, info: person.phoneNumber)
                 ContactInfo(image: Contacts.email.rawValue, info: person.email)
             }
         }
+        .listStyle(.plain)
     }
 }
 
